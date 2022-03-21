@@ -5,10 +5,6 @@ import App from './App.js';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 
- fetch("../public/dataArray.json")
-   .then((res) => res.json())
-   .then((data) => console.log(data));
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
