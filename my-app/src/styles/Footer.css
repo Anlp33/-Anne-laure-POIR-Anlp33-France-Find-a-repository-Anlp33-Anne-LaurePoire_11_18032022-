@@ -1,0 +1,16 @@
+.footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 100px;
+}
+.footer img {
+  margin-top: 65px;
+}
+.footer p {
+  margin-top: 40px;
+  padding-bottom: 32px;
+}
