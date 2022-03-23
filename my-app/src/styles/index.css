@@ -16,8 +16,9 @@ code {
 
 .banner {
   border-radius: 25px;
-  margin: 43px auto 20px auto;
+  margin: 43px auto 30px auto;
   align-content: center;
+  width: 100%;
 }
 #banner {
   position: relative;
