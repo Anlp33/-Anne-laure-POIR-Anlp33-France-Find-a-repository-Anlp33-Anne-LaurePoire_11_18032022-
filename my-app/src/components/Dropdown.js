@@ -11,10 +11,9 @@ export default function Dropdown(props) {
     function toggleDropdown() {
       setIsOpened(prevStatus => !prevStatus)
     }
-  const arrow = isOpened ? `${arrowDown}` : `${arrowUp}`;
+  const arrow = isOpened ? arrowUp : arrowDown;
   const dropdownDisplay = isOpened ? "show": "hide"
   
-  console.log(isOpened)
 
   return (
     <div className="dropdown">

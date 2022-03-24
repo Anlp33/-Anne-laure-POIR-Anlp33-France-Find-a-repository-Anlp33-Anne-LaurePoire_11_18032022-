@@ -1,7 +1,6 @@
 .dropdown {
   width: 80%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 30px auto;
 }
 
 .dropdown h2 {
@@ -36,9 +35,13 @@
 .dropdown img {
   padding: 0 30px;
 }
-.show{
-    display: block;
+.show {
+  display: block;
 }
 .hide {
-    display: none;
+  display: none;
+}
+
+.dropdown-Rent {
+  display: flex;
 }

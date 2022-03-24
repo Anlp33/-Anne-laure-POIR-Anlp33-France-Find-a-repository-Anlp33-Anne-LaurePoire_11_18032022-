@@ -16,7 +16,7 @@ code {
 
 .banner {
   border-radius: 25px;
-  margin: 43px auto 30px auto;
+  margin: 43px auto 0px auto;
   align-content: center;
   width: 100%;
 }
@@ -35,16 +35,6 @@ code {
   margin: 0;
   text-align: center;
   width: 100%;
-}
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  border-radius: 25px;
-  background-color: #f6f6f6;
-  width: 1240px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .header .active {
