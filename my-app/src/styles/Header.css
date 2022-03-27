@@ -20,3 +20,24 @@
   text-decoration: none;
   color: #ff6060;
 }
+.header .active {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px){
+  .header img {
+    width: 145px;
+    height: 57px;
+  }
+  .header {
+    font-size: 12px;
+    margin: 20px;
+  }
+  .header ul {
+    align-items: center;
+    padding-left: 0;
+  }
+  .header li {
+    padding-left: 20px;
+  }
+}

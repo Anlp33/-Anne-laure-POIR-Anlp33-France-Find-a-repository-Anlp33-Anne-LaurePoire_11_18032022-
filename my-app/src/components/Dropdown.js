@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/dropdown.css";
 import { useState } from "react";
 import arrowDown from "../assets/arrow_down.svg"
-import arrowUp from "../assets/arrow-up.svg";
+import arrowUp from "../assets/arrow_up.svg";
 
 
 export default function Dropdown(props) {

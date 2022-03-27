@@ -15,10 +15,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="location" element={<Rent />} >
-        <Route path=":dataid" element={<Home />} />
-        </Route>
-        <Route path="*" element={<Error />} />
+        <Route path="location/:cardId" element={<Rent />} />
+               <Route path="*" element={<Error />} />
         <Route path="about" element={<About />} />
       </Routes>
       <Footer />

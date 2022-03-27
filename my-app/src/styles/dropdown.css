@@ -45,3 +45,31 @@
 .dropdown-Rent {
   display: flex;
 }
+.dropdown-Rent h2 {
+  font-size: 18px;
+}
+
+.dropdown-Rent p {
+  font-size: 18px;
+}
+.dropdown box {
+  width: 50%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .dropdown {
+    width: 100%;
+    margin: 5px auto;
+  }
+  .dropdown-Rent h2 {
+    font-size: 13px;
+  }
+  .dropdown p {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+   .dropdown img {
+    width: 18px;
+    height: 18px;
+  }
+}

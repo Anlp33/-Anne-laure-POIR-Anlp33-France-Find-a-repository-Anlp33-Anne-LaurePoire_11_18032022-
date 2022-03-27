@@ -1,4 +1,4 @@
-h1 {
+.error h1 {
   text-align: center;
   font-size: 288px;
   font-weight: 800;
@@ -25,4 +25,22 @@ h1 {
 }
 .error a {
   color: #ff6060;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .error {
+    width: auto;
+  }
+  .error h1 {
+    font-size: 64px;
+    font-weight: 800;
+    margin: 60px;
+  }
+  .error h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #ff6060;
+    margin: 0 0 200px 0;
+  }
 }

@@ -1,19 +1,18 @@
-
-.rent--info {
+.rent-info {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   align-items: center;
 }
 
-.rent--info--leftCorner h2 {
+.rent-info-leftCorner h2 {
   font-size: 36px;
   color: #ff6060;
   font-weight: 500;
   margin: 0;
 }
 
-.rent--info--leftCorner p {
+.rent-info-leftCorner p {
   font-size: 18px;
   color: #ff6060;
   font-weight: 500;
@@ -50,3 +49,51 @@
   color: WHITE;
   margin-right: 10px;
 }
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .rent-info-leftCorner h2 {
+    font-size: 18px;
+  }
+  .rent-info-leftCorner p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .rent-info {
+    align-items: baseline;
+    flex-direction: column;
+  }
+  .rent-info-rightCorner {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tags {
+    margin: 0;
+  }
+  .tags li {
+    font-size: 10px;
+  }
+  .dropdown-Rent {
+    display: flex;
+    flex-direction: column;
+  }
+  .star-empty {
+    width: 18px;
+    height: 18px;
+  }
+  .star-filled {
+    width: 18px;
+    height: 18px;
+  }
+  .host {
+    align-items: center;
+  }
+  .host h2 {
+    font-size: 12px;
+  }
+  .host img {
+    width: 32px;
+    height: 32px;
+  }
+} ;

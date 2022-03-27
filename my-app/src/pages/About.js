@@ -6,7 +6,7 @@ export default function About() {
   const aboutArray = [
     {
       title: "Fiabilité",
-      text: "Notre Plateforme ne montre que les Hébergements qui entretiennent une relation commerciale avec nous, et elle ne montre pas nécessairement tous leurs produits ou services.",
+      text: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.",
       id: 1,
     },
     {
@@ -16,12 +16,12 @@ export default function About() {
     },
     {
       title: "Service",
-      text: "Quelles que soient votre destination et vos envies, Kasa facilite vos séjours et vous garantit une assistance 24h/24 et 7j/7.",
+      text: "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
       id: 3,
     },
     {
       title: "Responsabilité",
-      text: "Nous prenons des mesures raisonnables pour mettre à disposition notre Plateforme, mais nous ne pouvons garantir que toutes les informations qu’elle contient sont exactes (nous obtenons des informations des Prestataires de services). Dans la mesure permise par la loi, nous ne pouvons être tenus responsables des erreurs, des interruptions ou des informations manquantes - bien que nous fassions tout notre possible pour les corriger/réparer dès que possible.",
+      text: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
       id: 4,
     },
   ];
@@ -32,7 +32,7 @@ export default function About() {
 
   return (
     <div>
-      <img src={bannerAbout} alt="banner" className="banner"></img>
+      <img src={bannerAbout} alt="banner" className="bannerAbout"></img>
       {aboutElements}
     </div>
   );
