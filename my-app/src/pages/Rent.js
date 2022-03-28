@@ -2,46 +2,65 @@ import React from "react";
 import Gallery from "../components/Gallery";
 import Dropdown from "../components/Dropdown";
 import "../styles/dropdown.css";
-import { useEffect, useState } from "react";
-import Info from "../components/Info";
+import "../styles/rent.css";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function Rent() {
-  const { cardId } = useParams();
-  console.log(cardId);
+  const params = useParams();
 
-  const [dataRent, setData] = useState([]);
+  const [dataRent, setData] = useState("");
 
-  React.useEffect(function () {
+  useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
+      .then((data) => {
+        // const flat = data.find((location) => location.id === params.cardId);
+        setData(data.find((location) => location.id === params.cardId));
+        // console.log(dataRent.host.picture);
+      });
+  }, [params.cardId]);
 
-  //Récupérer id dans URL
   //faire apparaitre les photos Carrousel
   //créer carrousel avec flêche (si tab length est de 1 on enlève les fleches)
-  //séparer les tags et la liste équipements
+  //dropdown liste équipements
   //récupérer le nombre d'étoiles et afficher en fonction
+  //corriger CSS page d'accueil et zoom dans about
 
-  const RentData = dataRent.map((data) => {
-    // const tagArray = data.tags.map((tag) => `<li>${tag}</li>`);
-    // console.log(tagArray);
-    return (
-      <div>
-        <Gallery pictures={data.pictures} />
-        <Info key={data.id} {...data} />
-        <div className="dropdown-Rent">
-          <div className="dropdown box">
-            <Dropdown title="Description" text={data.description} />
-          </div>
-          <div className="dropdown box">
-            <Dropdown title="Equipements" text={data.equipments} />
+  return (
+    <div>
+      {dataRent && <Gallery pictures={dataRent.pictures} />}
+      <div className="rent-info">
+        <div className="rent-info-leftCorner">
+          {dataRent && <h2>{dataRent.title}</h2>}
+          {dataRent && <p>{dataRent.location}</p>}
+          {dataRent && (
+            <ul className="tags">
+              {dataRent.tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div className="rent-info-rightCorner">
+          <div className="host">
+            {dataRent && <h2>{dataRent.host.name}</h2>}
+            {dataRent && <img src={dataRent.host.picture} alt="host profile" />}
           </div>
         </div>
       </div>
-    );
-  });
-
-  return <div>{RentData}</div>;
+      <div className="dropdown-Rent">
+        <div className="dropdown box">
+          {dataRent && (
+            <Dropdown title="Description" text={dataRent.description} />
+          )}
+        </div>
+        <div className="dropdown box">
+          {dataRent && (
+            <Dropdown title="Equipements" text={dataRent.equipments} />
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }

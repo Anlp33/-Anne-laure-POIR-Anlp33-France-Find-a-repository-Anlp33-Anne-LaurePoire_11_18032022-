@@ -6,7 +6,7 @@ import arrowUp from "../assets/arrow_up.svg";
 
 
 export default function Dropdown(props) {
-    const [isOpened, setIsOpened] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
 
     function toggleDropdown() {
       setIsOpened(prevStatus => !prevStatus)
@@ -17,7 +17,7 @@ export default function Dropdown(props) {
 
   return (
     <div className="dropdown">
-      <div className="dropdown--title">
+      <div className="dropdown-title">
         <h2>{props.title}</h2>
         <img
           src={arrow}

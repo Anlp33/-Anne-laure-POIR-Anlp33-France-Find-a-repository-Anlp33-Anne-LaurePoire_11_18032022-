@@ -21,7 +21,7 @@
   font-size: 24px;
   font-weight: 400;
 }
-.dropdown--title {
+.dropdown-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,12 +34,6 @@
 }
 .dropdown img {
   padding: 0 30px;
-}
-.show {
-  display: block;
-}
-.hide {
-  display: none;
 }
 
 .dropdown-Rent {
@@ -68,7 +62,7 @@
     font-size: 12px;
     font-weight: lighter;
   }
-   .dropdown img {
+  .dropdown img {
     width: 18px;
     height: 18px;
   }

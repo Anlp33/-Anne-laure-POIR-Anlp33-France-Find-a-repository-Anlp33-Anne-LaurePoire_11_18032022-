@@ -17,9 +17,8 @@ export default function Home() {
 
   const HomeData = data.map((data) => {
     return (
-      <Link to={`location/${data.id}`}>
+      <Link to={`location/${data.id}`} key={data.id}>
         <Card
-          key={data.id}
           {...data}
         />
       </Link>
