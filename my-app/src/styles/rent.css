@@ -1,15 +1,15 @@
 .rent-info {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
   align-items: center;
+  align-items: flex-end;
 }
 
 .rent-info-leftCorner h2 {
   font-size: 36px;
   color: #ff6060;
   font-weight: 500;
-  margin: 0;
+  margin-bottom: 0;
 }
 
 .rent-info-leftCorner p {
@@ -20,11 +20,19 @@
 }
 .host {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.host img {
+.host-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+.host-details img {
   width: 64px;
   height: 64px;
-  border-radius: 30px;
+  border-radius: 35px;
   object-fit: cover;
 }
 .host h2 {
@@ -35,9 +43,17 @@
   text-align: right;
   margin-right: 10px;
 }
+.rate {
+  display: flex;
+}
+.star {
+  width: 30px;
+  height: 30px;
+}
 .tags {
   display: flex;
   padding: 0;
+  margin: 0;
 }
 .tags li {
   background-color: #ff6060;
@@ -57,43 +73,45 @@
     font-size: 14px;
     margin-top: 10px;
   }
+  .rent-info-rightCorner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   .rent-info {
     align-items: baseline;
     flex-direction: column;
   }
-  .rent-info-rightCorner {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-  }
   .tags {
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
   .tags li {
     font-size: 10px;
+    margin-bottom: 5px;
   }
-  .dropdown-Rent {
-    display: flex;
-    flex-direction: column;
-  }
-  .star-empty {
-    width: 18px;
-    height: 18px;
-  }
-  .star-filled {
-    width: 18px;
-    height: 18px;
-  }
+  
   .host {
+    display: flex;
+    flex-direction: row-reverse;
     align-items: center;
+    width: inherit;
+    justify-content: space-between;
   }
   .host h2 {
     font-size: 12px;
   }
-  .host img {
+  .host-details img {
     width: 32px;
     height: 32px;
+  }
+  .host-details {
+    margin-bottom: 0;
+  }
+  .star {
+    height: 15px;
+    width: 15px;
   }
 } ;

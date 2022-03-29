@@ -1,4 +1,4 @@
-.dropdown {
+.dropdownAbout {
   width: 80%;
   margin: 30px auto;
 }
@@ -38,6 +38,8 @@
 
 .dropdown-Rent {
   display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 .dropdown-Rent h2 {
   font-size: 18px;
@@ -46,14 +48,38 @@
 .dropdown-Rent p {
   font-size: 18px;
 }
-.dropdown box {
-  width: 50%;
+#dropdownRent-title {
+  width: 48%;
 }
-
+#dropdownRent-text {
+  width: 48%;
+}
+.show li {
+  list-style: none;
+}
 @media only screen and (min-width: 320px) and (max-width: 600px) {
   .dropdown {
     width: 100%;
     margin: 5px auto;
+  }
+  .dropdown-Rent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+ .dropdown-title h2 {
+    font-size: 13px;
+  }
+  .dropdownAbout {
+    margin: 20px auto;
+    width: 100%;
+  }
+  #dropdownRent-title {
+    width: 100%;
+  }
+  #dropdownRent-text {
+    width: 100%;
+    margin-bottom: 10px;
   }
   .dropdown-Rent h2 {
     font-size: 13px;
@@ -61,6 +87,7 @@
   .dropdown p {
     font-size: 12px;
     font-weight: lighter;
+    padding: 20px 10px 5px 10px;
   }
   .dropdown img {
     width: 18px;

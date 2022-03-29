@@ -27,7 +27,11 @@ export default function About() {
   ];
 
   const aboutElements = aboutArray.map((element) => {
-    return <Dropdown title={element.title} text={element.text} key={element.id}/>;
+    return (
+      <div class="dropdownAbout">
+        <Dropdown title={element.title} text={element.text} key={element.id} />
+      </div>
+    );
   });
 
   return (

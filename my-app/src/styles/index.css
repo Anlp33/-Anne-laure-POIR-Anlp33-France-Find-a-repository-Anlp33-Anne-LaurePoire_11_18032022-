@@ -2,10 +2,8 @@
 body {
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 30px;
   max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -15,7 +13,8 @@ code {
 }
 
 .show {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .hide {
   display: none;
@@ -49,9 +48,6 @@ code {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1200px) {
-  body {
-    margin: 20px;
-  }
   #banner img {
     width: 100%;
     height: 111px;

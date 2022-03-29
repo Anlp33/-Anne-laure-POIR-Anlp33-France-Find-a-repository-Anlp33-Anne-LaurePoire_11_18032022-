@@ -3,13 +3,22 @@ import starFilled from "../assets/star_filled.svg";
 import starEmpty from "../assets/star_empty.svg";
 
 export default function Rating(props) {
+  let starArray = [];
+
+  for (let i = 0; i < 5; i++) {
+    if (i < props.rating) {
+      starArray.push(starFilled);
+    } else {
+      starArray.push(starEmpty);
+    }
+  }
+
   return (
-        <div className="rate" rating={props.rating}>
-          <img src={starFilled} alt="star" className="star-filled" />
-          <img src={starFilled} alt="star" className="star-filled" />
-          <img src={starFilled} alt="star" className="star-filled" />
-          <img src={starEmpty} alt="star" className="star-empty" />
-          <img src={starEmpty} alt="star" className="star-empty" />
-        </div>
+    <div className="rate" rating={props.rating}>
+     {starArray.map((star) => (
+          <img src={star} alt="star" className="star"></img>
+        ))}
+    </div>
   );
 }
+

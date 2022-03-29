@@ -1,5 +1,6 @@
 import React from "react";
 import Gallery from "../components/Gallery";
+import Rating from "../components/Rating";
 import Dropdown from "../components/Dropdown";
 import "../styles/dropdown.css";
 import "../styles/rent.css";
@@ -21,11 +22,8 @@ export default function Rent() {
       });
   }, [params.cardId]);
 
-  //faire apparaitre les photos Carrousel
-  //créer carrousel avec flêche (si tab length est de 1 on enlève les fleches)
-  //dropdown liste équipements
   //récupérer le nombre d'étoiles et afficher en fonction
-  //corriger CSS page d'accueil et zoom dans about
+  //corriger CSS page d'accueil et zoom dans about, taille photo gallery
 
   return (
     <div>
@@ -44,21 +42,32 @@ export default function Rent() {
         </div>
         <div className="rent-info-rightCorner">
           <div className="host">
-            {dataRent && <h2>{dataRent.host.name}</h2>}
-            {dataRent && <img src={dataRent.host.picture} alt="host profile" />}
+            <div className="host-details">
+              {dataRent && <h2>{dataRent.host.name}</h2>}
+
+              {dataRent && (
+                <img src={dataRent.host.picture} alt="host profile" />
+              )}
+            </div>
+            {dataRent && <Rating rating={dataRent.rating} />}
           </div>
         </div>
       </div>
       <div className="dropdown-Rent">
-        <div className="dropdown box">
+        <div id="dropdownRent-title">
           {dataRent && (
             <Dropdown title="Description" text={dataRent.description} />
           )}
         </div>
-        <div className="dropdown box">
+        <div id="dropdownRent-text">
           {dataRent && (
-            <Dropdown title="Equipements" text={dataRent.equipments} />
-          )}
+            <Dropdown
+              title="Equipements"
+              text={dataRent.equipments.map((equipment) => (
+                <li>{equipment}</li>
+              ))}
+            />
+          )}{" "}
         </div>
       </div>
     </div>
