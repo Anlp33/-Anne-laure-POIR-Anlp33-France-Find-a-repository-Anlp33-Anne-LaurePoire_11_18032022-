@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 body {
-  display: flex;
-  justify-content: center;
   margin: 30px;
   max-width: 1440px;
   font-family: "Montserrat", sans-serif;
