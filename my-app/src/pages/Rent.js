@@ -63,8 +63,8 @@ export default function Rent() {
           {dataRent && (
             <Dropdown
               title="Equipements"
-              text={dataRent.equipments.map((equipment) => (
-                <li>{equipment}</li>
+              text={dataRent.equipments.map((equipment, index) => (
+                <li key={`${equipment}-${index}`}>{equipment}</li>
               ))}
             />
           )}{" "}

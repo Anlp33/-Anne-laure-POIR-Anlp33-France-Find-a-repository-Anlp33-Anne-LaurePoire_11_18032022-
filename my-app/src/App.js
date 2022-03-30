@@ -1,7 +1,5 @@
 import React from "react";
 import Header from "./components/Header";
-// import Banner from "./components/Banner";
-// import Card from "./components/Card";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Home from "./pages/Home";

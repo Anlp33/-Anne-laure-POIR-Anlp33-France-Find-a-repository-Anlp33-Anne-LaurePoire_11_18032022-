@@ -15,9 +15,14 @@ export default function Rating(props) {
 
   return (
     <div className="rate" rating={props.rating}>
-     {starArray.map((star) => (
-          <img src={star} alt="star" className="star"></img>
-        ))}
+      {starArray.map((star, index) => (
+        <img
+          src={star}
+          alt="star"
+          className="star"
+          key={`${star}-${index}`}
+        ></img>
+      ))}
     </div>
   );
 }
