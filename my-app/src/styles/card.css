@@ -45,7 +45,7 @@
   }
   .card {
     margin: 0 0 20px 0;
-    width: auto;
+    width: 100%;
     height: auto;
   }
 }

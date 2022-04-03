@@ -40,6 +40,9 @@ export default function Gallery(props) {
         alt="pictures"
         className="gallery-picture"
       ></img>
+      <div className="page-number">
+        {count + 1}/{props.pictures.length}
+      </div>
       <img
         src={arrowForward}
         alt="arrow forward"

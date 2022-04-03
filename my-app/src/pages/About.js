@@ -28,8 +28,8 @@ export default function About() {
 
   const aboutElements = aboutArray.map((element) => {
     return (
-      <div class="dropdownAbout">
-        <Dropdown title={element.title} text={element.text} key={element.id} />
+      <div className="dropdownAbout" key={element.id}>
+        <Dropdown title={element.title} text={element.text} />
       </div>
     );
   });

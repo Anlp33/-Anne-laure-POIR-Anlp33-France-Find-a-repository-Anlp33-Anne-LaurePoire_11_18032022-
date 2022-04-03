@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="location/:cardId" element={<Rent />} />
-               <Route path="*" element={<Error />} />
+        <Route path="*" element={<Error />} />
         <Route path="about" element={<About />} />
       </Routes>
       <Footer />
