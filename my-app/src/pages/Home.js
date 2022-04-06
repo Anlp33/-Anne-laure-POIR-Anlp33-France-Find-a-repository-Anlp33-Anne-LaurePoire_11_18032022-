@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import "../styles/card.css";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -24,7 +24,6 @@ export default function Home() {
       </Link>
     );
   });
-  //connait pas data.id en dehors du .map
 
   return (
     <div>

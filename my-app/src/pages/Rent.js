@@ -2,10 +2,12 @@ import React from "react";
 import Gallery from "../components/Gallery";
 import Rating from "../components/Rating";
 import Dropdown from "../components/Dropdown";
+import Error from "./Error";
 import "../styles/dropdown.css";
 import "../styles/rent.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Rent() {
   const params = useParams();
@@ -22,9 +24,13 @@ export default function Rent() {
       });
   }, [params.cardId]);
 
-  //récupérer le nombre d'étoiles et afficher en fonction
-  //corriger CSS page d'accueil et zoom dans about, taille photo gallery
+  //faire un return qui utilise l'option nav to page erreur si dataRent n'existe pas
 
+  if (dataRent === undefined) {
+    return <NavLink to="*"></NavLink>;
+  }
+
+  //if dataRent === undefined, return page erreur
   return (
     <div>
       {dataRent && <Gallery pictures={dataRent.pictures} />}
