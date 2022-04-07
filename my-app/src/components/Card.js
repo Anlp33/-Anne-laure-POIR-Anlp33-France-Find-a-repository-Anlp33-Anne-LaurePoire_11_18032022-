@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/card.css";
-import { useParams } from "react-router-dom";
 
 export default function Card(props) {
   return (

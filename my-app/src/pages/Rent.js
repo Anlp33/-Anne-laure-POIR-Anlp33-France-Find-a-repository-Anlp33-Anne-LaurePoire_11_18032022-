@@ -5,8 +5,7 @@ import Dropdown from "../components/Dropdown";
 import "../styles/dropdown.css";
 import "../styles/rent.css";
 import { useState, useEffect } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
 export default function Rent() {
   const params = useParams();
@@ -17,18 +16,14 @@ export default function Rent() {
     fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
-        // const flat = data.find((location) => location.id === params.cardId);
         setData(data.find((location) => location.id === params.cardId));
-        // console.log(dataRent.host.picture);
       });
   }, [params.cardId]);
-
-  //faire un return qui utilise l'option nav to page erreur si dataRent n'existe pas
 
   if (dataRent === undefined) {
     return <Navigate to="*"></Navigate>;
   }
-  
+
   return (
     <div>
       {dataRent && <Gallery pictures={dataRent.pictures} />}
