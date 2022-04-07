@@ -2,11 +2,10 @@ import React from "react";
 import Gallery from "../components/Gallery";
 import Rating from "../components/Rating";
 import Dropdown from "../components/Dropdown";
-import Error from "./Error";
 import "../styles/dropdown.css";
 import "../styles/rent.css";
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 export default function Rent() {
@@ -27,10 +26,9 @@ export default function Rent() {
   //faire un return qui utilise l'option nav to page erreur si dataRent n'existe pas
 
   if (dataRent === undefined) {
-    return <NavLink to="*"></NavLink>;
+    return <Navigate to="*"></Navigate>;
   }
-
-  //if dataRent === undefined, return page erreur
+  
   return (
     <div>
       {dataRent && <Gallery pictures={dataRent.pictures} />}
