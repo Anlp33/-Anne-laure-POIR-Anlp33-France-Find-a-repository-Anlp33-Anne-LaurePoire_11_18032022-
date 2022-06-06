@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://Anlp33.github.io/Anne-laure-POIRE_11_17032022",
+  "homepage": "https://anlp33.github.io/Anne-laure-POIRE_11_17032022",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
