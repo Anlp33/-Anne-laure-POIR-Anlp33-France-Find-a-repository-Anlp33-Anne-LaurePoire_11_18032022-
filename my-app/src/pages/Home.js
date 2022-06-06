@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <div className="card-container">{HomeData}   </div>
+      <div className="card-container">{HomeData}</div>
     </div>
   );
 }
