@@ -32,7 +32,7 @@ code {
   position: relative;
   text-align: relative;
 }
-#banner h2 {
+.banner h2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -56,6 +56,14 @@ code {
     font-size: 24px;
     text-align: left;
     width: 217px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
   }
   .bannerAbout {
     width: 100%;
@@ -65,7 +73,7 @@ code {
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1200px) {
+@media only screen and (min-width: 601px) {
   #banner h2 {
     position: absolute;
     top: 50%;
