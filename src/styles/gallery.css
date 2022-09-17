@@ -13,11 +13,13 @@
 .arrow-back {
   position: absolute;
   left: 0;
+  cursor: pointer;
 }
 
 .arrow-forward {
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .page-number {
